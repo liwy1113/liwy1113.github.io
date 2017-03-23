@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Wenyu Li</title>
+    <link>https://liwy1113.github.io/about/index.xml</link>
+    <description>Recent content in About on Wenyu Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2017 Wenyu Li</copyright>
+    <atom:link href="https://liwy1113.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Me</title>
+      <link>https://liwy1113.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://liwy1113.github.io/about/</guid>
+      <description>&lt;div id=&#34;who-am-i&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Who am I?&lt;/h3&gt;
+&lt;p&gt;I am a Master student of Statistics at UC Davis. I guess you are here because you want to know a bit about me, huh? My interests include statistics, data analysis, data science and machine learning. This website is the home of my data projects and tutorials. Also I’m happy to share what I’ve learned so far. My ultimate goal is to contribute my personal skills and experience to the technology and community.&lt;/p&gt;
+&lt;p&gt;I’m looking for data analyst and data scientist jobs. Looking forward to hearing from you if you have any questions or suggestions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;education&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Education&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MS in Statistics, University of California, America&lt;/li&gt;
+&lt;li&gt;BS in Mathematics and Applied Mathematics, Jilin University, China&lt;/li&gt;
+&lt;li&gt;BS in Economics (Minor), Jilin University, China&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;skills-interests-in-data-science&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Skills &amp;amp; Interests in Data Science&lt;/h3&gt;
+&lt;p&gt;Studing applied mathematics and statistics for 6 years, I have taken courses including Machine Learning, Statistical Computing, Categorical Data Analysis, Algorithm Design and so on. I am comfortable working with R, Python, SQL programming languages, and also experienced in using data visualization tools like Tableau and R-shiny. I have been extensively involved in working in the field of data as part of my academic projects and internships. My multiple practical experience gave me the experience and confidence to develop solutions to complex analytic challenges and real-world problems.&lt;/p&gt;
+&lt;p&gt;So how can we learn from data? As an enthusiast of data science, I am motivated by the belief that data can be used to make better decisions. I am interested in exploring various facets of data science. Now I am focus on maching learning and information visualization to augment my professional experience. I will keep learning and practicing in the future, using data to inform decisions that positively affect user experience for companies.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

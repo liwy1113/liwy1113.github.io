@@ -2,19 +2,842 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on Wenyu Li</title>
-    <link>https://liwy1113.github.io/about/index.xml</link>
+    <link>/about/index.xml</link>
     <description>Recent content in About on Wenyu Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Wenyu Li</copyright>
-    <atom:link href="https://liwy1113.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>/about/index_files/d3-legend/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/index_files/d3-legend/readme/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en-us&#34;&gt;
+&lt;head&gt;&lt;meta charset=&#34;utf-8&#34;&gt;
+&lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt;
+
+&lt;meta name=&#34;description&#34; content=&#34;Describe your website&#34;&gt;
+&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt;
+&lt;meta name=&#34;robots&#34; content=&#34;all,follow&#34;&gt;
+&lt;meta name=&#34;googlebot&#34; content=&#34;index,follow,snippet,archive&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/bootstrap.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/owl.carousel.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/owl.theme.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/github-gist.css&#34;&gt;
+&lt;script src=&#34;../../../../js/highlight.pack.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+  hljs.initHighlightingOnLoad();
+&lt;/script&gt;
+
+
+  &lt;link href=&#34;../../../../css/style.default.css&#34; rel=&#34;stylesheet&#34; id=&#34;theme-stylesheet&#34;&gt;
+
+
+&lt;link href=&#34;../../../../css/custom.css&#34; rel=&#34;stylesheet&#34;&gt;
+&lt;link rel=&#34;shortcut icon&#34; href=&#34;../../../../img/favicon.png&#34;&gt;
+
+
+&lt;script&gt;
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga(&#39;create&#39;, &#39;UA-89721810-1&#39;, &#39;auto&#39;);
+ga(&#39;send&#39;, &#39;pageview&#39;);
+&lt;/script&gt;
+&lt;script async src=&#39;//www.google-analytics.com/analytics.js&#39;&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&#34;all&#34;&gt;
+      &lt;div class=&#34;container-fluid&#34;&gt;
+          &lt;div class=&#34;row row-offcanvas row-offcanvas-left&#34;&gt;
+              
+&lt;div id=&#34;sidebar&#34; class=&#34;col-sb-fixedpos col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas&#34;&gt;
+  &lt;div class=&#34;sidebar-content&#34;&gt;
+    &lt;h1 class=&#34;sidebar-heading&#34;&gt;&lt;a href=&#34;../../../../&#34;&gt;Vincent Zhang&lt;/a&gt;&lt;/h1&gt;
+
+    &lt;ul class=&#34;sidebar-menu&#34;&gt;
+      
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../&#34;&gt;Home&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../about/&#34;&gt;About&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../projects/&#34;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../blog/&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../contact/&#34;&gt;Get in touch&lt;/a&gt;&lt;/li&gt;
+      
+
+       
+
+&lt;div class=&#34;panel panel-default sidebar-menu&#34;&gt;
+
+   
+
+    &lt;div class=&#34;panel-body&#34;&gt;
+        &lt;form action=&#34;//google.com/search&#34; method=&#34;get&#34; accept-charset=&#34;UTF-8&#34; role=&#34;search&#34;&gt;
+            &lt;div class=&#34;input-group&#34;&gt;
+                &lt;input type=&#34;search&#34; name=&#34;q&#34; results=&#34;0&#34; class=&#34;form-control&#34; placeholder=&#34;Search&#34;&gt;
+                &lt;input type=&#34;hidden&#34; name=&#34;q&#34; value=&#34;site:/&#34;&gt;
+                &lt;span class=&#34;input-group-btn&#34;&gt;
+                    &lt;button type=&#34;submit&#34; class=&#34;btn btn-template-main&#34;&gt;&lt;i class=&#34;fa fa-search&#34;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+ 
+
+      
+
+
+
+
+
+ 
+
+      
+
+
+&lt;div class=&#34;panel sidebar-menu&#34;&gt;
+    &lt;div class=&#34;panel-heading&#34;&gt;
+        &lt;h3 class=&#34;panel-title&#34;&gt;Tags&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;panel-body&#34;&gt;
+        &lt;ul class=&#34;tag-cloud&#34;&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/air-quality&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; air-quality&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/data-viz&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; data-viz&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/eda&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; eda&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/github&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; github&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/learning&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; learning&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/ml&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; ml&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/nba&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; nba&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/nlp&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; nlp&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/python&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; python&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/r&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; r&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/rnn&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; rnn&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/sql&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; sql&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/timeseries&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; timeseries&lt;/a&gt;
+            &lt;/li&gt;
+            
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+ 
+
+    &lt;/ul&gt;
+    &lt;p class=&#34;social&#34;&gt;
+  
+  
+  
+  &lt;a href=&#34;https://twitter.com/Mr_AppleV&#34; data-animate-hover=&#34;pulse&#34; class=&#34;external twitter&#34;&gt;
+    &lt;i class=&#34;fa fa-twitter&#34;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  
+  
+  
+  &lt;a href=&#34;mailto:jpzhang@ucdavis.edu&#34; data-animate-hover=&#34;pulse&#34; class=&#34;email&#34;&gt;
+    &lt;i class=&#34;fa fa-envelope&#34;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  
+  
+  &lt;a href=&#34;https://www.linkedin.com/in/jpzhangv&#34; data-animate-hover=&#34;pulse&#34;&gt;
+    &lt;i class=&#34;fa fa-linkedin&#34;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  
+  
+  
+&lt;a href=&#34;https://www.github.com/jpzhangvincent&#34;&gt;
+  &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
+
+&lt;/p&gt;
+
+
+    &lt;div class=&#34;copyright&#34;&gt;
+      &lt;p class=&#34;credit&#34;&gt;
+        
+          &amp;copy;2016 Vincent Zhang
+        
+        | Template by &lt;a href=&#34;https://bootstrapious.com/free-templates&#34; class=&#34;external&#34;&gt;Bootstrapious.com&lt;/a&gt;
+
+&amp;amp; ported to Hugo by &lt;a href=&#34;https://github.com/kishaningithub&#34;&gt;Kishan B&lt;/a&gt;
+
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-12 col-sm-8 col-md-9 content-column white-background col-main-fixedpos&#34;&gt;
+  &lt;div class=&#34;small-navbar visible-xs&#34;&gt;
+  &lt;button type=&#34;button&#34; data-toggle=&#34;offcanvas&#34; class=&#34;btn btn-ghost pull-left&#34;&gt; &lt;i class=&#34;fa fa-align-left&#34;&gt; &lt;/i&gt;Menu&lt;/button&gt;
+  &lt;h1 class=&#34;small-navbar-heading&#34;&gt;&lt;a href=&#34;../../../../&#34;&gt;Vincent Zhang&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-lg-8&#34;&gt;
+      &lt;div class=&#34;content-column-content&#34;&gt;
+         &lt;h1&gt;&lt;/h1&gt;
+         
+
+&lt;h1 id=&#34;d3-legend&#34;&gt;d3-legend&lt;/h1&gt;
+
+&lt;p&gt;Full documentation: &lt;a href=&#34;http://d3-legend.susielu.com&#34;&gt;http://d3-legend.susielu.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;h3 id=&#34;using-just-the-minified-file&#34;&gt;Using just the minified file&lt;/h3&gt;
+
+&lt;p&gt;You must inclue the &lt;a href=&#34;http://d3js.org/&#34;&gt;d3 library&lt;/a&gt; before including the legend file. Then you can simply add the compiled js file to your website:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;d3-legend.min.js&lt;/li&gt;
+&lt;li&gt;d3-legend.js (Human readable version)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;using-cdn&#34;&gt;Using CDN&lt;/h3&gt;
+
+&lt;p&gt;You can also add latest version of &lt;a href=&#34;https://cdnjs.com/libraries/d3-legend&#34;&gt;d3-legend hosted on cdnjs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;using-npm&#34;&gt;Using npm&lt;/h3&gt;
+
+&lt;p&gt;Already using d3? Great! You can add the d3 legend as a node module by running:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm i d3-svg-legend -S&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If not, install both this way:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm i d3@^3.0.0 d3-svg-legend -S&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Please note, d3 is now a peer dependency, you will have to have the npm d3 module separately. This component works with any 3.x version of d3.&lt;/p&gt;
+
+&lt;p&gt;If you &lt;code&gt;require(&#39;d3-svg-legend&#39;)&lt;/code&gt; we attach to d3 as &lt;code&gt;d3.legend&lt;/code&gt;. If you&amp;rsquo;d like to use d3-legend without extending d3, &lt;code&gt;require(&#39;d3-svg-legend/no-extend&#39;)&lt;/code&gt;. For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var d3 = require(&#39;d3&#39;)
+var legend = require(&#39;d3-svg-legend/no-extend&#39;)
+
+var svg = d3.select(&amp;quot;#svg-color-quant&amp;quot;);
+
+var quantize = d3.scale.quantize()
+    .domain([ 0, 0.15 ])
+    .range(d3.range(9).map(function(i) { return &amp;quot;q&amp;quot; + i + &amp;quot;-9&amp;quot;; }));
+
+svg.append(&amp;quot;g&amp;quot;)
+  .attr(&amp;quot;class&amp;quot;, &amp;quot;legendQuant&amp;quot;)
+  .attr(&amp;quot;transform&amp;quot;, &amp;quot;translate(20,20)&amp;quot;);
+
+var colorLegend = legend.color()
+    .labelFormat(d3.format(&amp;quot;.2f&amp;quot;))
+    .useClass(true)
+    .scale(quantize);
+
+svg.select(&amp;quot;.legendQuant&amp;quot;)
+  .call(colorLegend);
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;feedback&#34;&gt;Feedback&lt;/h2&gt;
+
+&lt;p&gt;I would love to hear from you about any additional features that would be useful, please say hi on twitter &lt;a href=&#34;https://www.twitter.com/DataToViz&#34;&gt;@DataToViz&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script src=&#34;../../../../js/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/jquery.cookie.js&#34;&gt; &lt;/script&gt;
+&lt;script src=&#34;../../../../js/ekko-lightbox.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/jquery.scrollTo.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/masonry.pkgd.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/imagesloaded.pkgd.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/owl.carousel.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/front.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/backtotop.js&#34;&gt;&lt;/script&gt; 
+
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/index_files/d3/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/index_files/d3/readme/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en-us&#34;&gt;
+&lt;head&gt;&lt;meta charset=&#34;utf-8&#34;&gt;
+&lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt;
+
+&lt;meta name=&#34;description&#34; content=&#34;Describe your website&#34;&gt;
+&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt;
+&lt;meta name=&#34;robots&#34; content=&#34;all,follow&#34;&gt;
+&lt;meta name=&#34;googlebot&#34; content=&#34;index,follow,snippet,archive&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/bootstrap.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/owl.carousel.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/owl.theme.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/github-gist.css&#34;&gt;
+&lt;script src=&#34;../../../../js/highlight.pack.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+  hljs.initHighlightingOnLoad();
+&lt;/script&gt;
+
+
+  &lt;link href=&#34;../../../../css/style.default.css&#34; rel=&#34;stylesheet&#34; id=&#34;theme-stylesheet&#34;&gt;
+
+
+&lt;link href=&#34;../../../../css/custom.css&#34; rel=&#34;stylesheet&#34;&gt;
+&lt;link rel=&#34;shortcut icon&#34; href=&#34;../../../../img/favicon.png&#34;&gt;
+
+
+&lt;script&gt;
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga(&#39;create&#39;, &#39;UA-89721810-1&#39;, &#39;auto&#39;);
+ga(&#39;send&#39;, &#39;pageview&#39;);
+&lt;/script&gt;
+&lt;script async src=&#39;//www.google-analytics.com/analytics.js&#39;&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&#34;all&#34;&gt;
+      &lt;div class=&#34;container-fluid&#34;&gt;
+          &lt;div class=&#34;row row-offcanvas row-offcanvas-left&#34;&gt;
+              
+&lt;div id=&#34;sidebar&#34; class=&#34;col-sb-fixedpos col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas&#34;&gt;
+  &lt;div class=&#34;sidebar-content&#34;&gt;
+    &lt;h1 class=&#34;sidebar-heading&#34;&gt;&lt;a href=&#34;../../../../&#34;&gt;Vincent Zhang&lt;/a&gt;&lt;/h1&gt;
+
+    &lt;ul class=&#34;sidebar-menu&#34;&gt;
+      
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../&#34;&gt;Home&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../about/&#34;&gt;About&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../projects/&#34;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../blog/&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../contact/&#34;&gt;Get in touch&lt;/a&gt;&lt;/li&gt;
+      
+
+       
+
+&lt;div class=&#34;panel panel-default sidebar-menu&#34;&gt;
+
+   
+
+    &lt;div class=&#34;panel-body&#34;&gt;
+        &lt;form action=&#34;//google.com/search&#34; method=&#34;get&#34; accept-charset=&#34;UTF-8&#34; role=&#34;search&#34;&gt;
+            &lt;div class=&#34;input-group&#34;&gt;
+                &lt;input type=&#34;search&#34; name=&#34;q&#34; results=&#34;0&#34; class=&#34;form-control&#34; placeholder=&#34;Search&#34;&gt;
+                &lt;input type=&#34;hidden&#34; name=&#34;q&#34; value=&#34;site:/&#34;&gt;
+                &lt;span class=&#34;input-group-btn&#34;&gt;
+                    &lt;button type=&#34;submit&#34; class=&#34;btn btn-template-main&#34;&gt;&lt;i class=&#34;fa fa-search&#34;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+ 
+
+      
+
+
+
+
+
+ 
+
+      
+
+
+&lt;div class=&#34;panel sidebar-menu&#34;&gt;
+    &lt;div class=&#34;panel-heading&#34;&gt;
+        &lt;h3 class=&#34;panel-title&#34;&gt;Tags&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;panel-body&#34;&gt;
+        &lt;ul class=&#34;tag-cloud&#34;&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/air-quality&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; air-quality&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/data-viz&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; data-viz&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/eda&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; eda&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/github&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; github&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/learning&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; learning&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/ml&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; ml&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/nba&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; nba&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/nlp&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; nlp&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/python&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; python&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/r&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; r&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/rnn&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; rnn&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/sql&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; sql&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/timeseries&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; timeseries&lt;/a&gt;
+            &lt;/li&gt;
+            
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+ 
+
+    &lt;/ul&gt;
+    &lt;p class=&#34;social&#34;&gt;
+  
+  
+  
+  &lt;a href=&#34;https://twitter.com/Mr_AppleV&#34; data-animate-hover=&#34;pulse&#34; class=&#34;external twitter&#34;&gt;
+    &lt;i class=&#34;fa fa-twitter&#34;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  
+  
+  
+  &lt;a href=&#34;mailto:jpzhang@ucdavis.edu&#34; data-animate-hover=&#34;pulse&#34; class=&#34;email&#34;&gt;
+    &lt;i class=&#34;fa fa-envelope&#34;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  
+  
+  &lt;a href=&#34;https://www.linkedin.com/in/jpzhangv&#34; data-animate-hover=&#34;pulse&#34;&gt;
+    &lt;i class=&#34;fa fa-linkedin&#34;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  
+  
+  
+&lt;a href=&#34;https://www.github.com/jpzhangvincent&#34;&gt;
+  &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
+
+&lt;/p&gt;
+
+
+    &lt;div class=&#34;copyright&#34;&gt;
+      &lt;p class=&#34;credit&#34;&gt;
+        
+          &amp;copy;2016 Vincent Zhang
+        
+        | Template by &lt;a href=&#34;https://bootstrapious.com/free-templates&#34; class=&#34;external&#34;&gt;Bootstrapious.com&lt;/a&gt;
+
+&amp;amp; ported to Hugo by &lt;a href=&#34;https://github.com/kishaningithub&#34;&gt;Kishan B&lt;/a&gt;
+
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-12 col-sm-8 col-md-9 content-column white-background col-main-fixedpos&#34;&gt;
+  &lt;div class=&#34;small-navbar visible-xs&#34;&gt;
+  &lt;button type=&#34;button&#34; data-toggle=&#34;offcanvas&#34; class=&#34;btn btn-ghost pull-left&#34;&gt; &lt;i class=&#34;fa fa-align-left&#34;&gt; &lt;/i&gt;Menu&lt;/button&gt;
+  &lt;h1 class=&#34;small-navbar-heading&#34;&gt;&lt;a href=&#34;../../../../&#34;&gt;Vincent Zhang&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-lg-8&#34;&gt;
+      &lt;div class=&#34;content-column-content&#34;&gt;
+         &lt;h1&gt;&lt;/h1&gt;
+         
+
+&lt;h1 id=&#34;data-driven-documents&#34;&gt;Data-Driven Documents&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://d3js.org&#34;&gt;&lt;img src=&#34;http://d3js.org/logo.svg&#34; align=&#34;left&#34; hspace=&#34;10&#34; vspace=&#34;6&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;D3.js&lt;/strong&gt; is a JavaScript library for manipulating documents based on data. &lt;strong&gt;D3&lt;/strong&gt; helps you bring data to life using HTML, SVG, and CSS. &lt;strong&gt;D3&lt;/strong&gt; emphasizes web standards and combines powerful visualization components with a data-driven approach to DOM manipulation, giving you the full capabilities of modern browsers without tying yourself to a proprietary framework.&lt;/p&gt;
+
+&lt;p&gt;Want to learn more? &lt;a href=&#34;https://github.com/mbostock/d3/wiki&#34;&gt;See the wiki.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For examples, &lt;a href=&#34;https://github.com/mbostock/d3/wiki/Gallery&#34;&gt;see the gallery&lt;/a&gt; and &lt;a href=&#34;http://bl.ocks.org/mbostock&#34;&gt;mbostock’s bl.ocks&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script src=&#34;../../../../js/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/jquery.cookie.js&#34;&gt; &lt;/script&gt;
+&lt;script src=&#34;../../../../js/ekko-lightbox.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/jquery.scrollTo.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/masonry.pkgd.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/imagesloaded.pkgd.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/owl.carousel.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/front.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/backtotop.js&#34;&gt;&lt;/script&gt; 
+
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/index_files/radarchart/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/index_files/radarchart/readme/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en-us&#34;&gt;
+&lt;head&gt;&lt;meta charset=&#34;utf-8&#34;&gt;
+&lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt;
+
+&lt;meta name=&#34;description&#34; content=&#34;Describe your website&#34;&gt;
+&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt;
+&lt;meta name=&#34;robots&#34; content=&#34;all,follow&#34;&gt;
+&lt;meta name=&#34;googlebot&#34; content=&#34;index,follow,snippet,archive&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/bootstrap.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/owl.carousel.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/owl.theme.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;../../../../css/github-gist.css&#34;&gt;
+&lt;script src=&#34;../../../../js/highlight.pack.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+  hljs.initHighlightingOnLoad();
+&lt;/script&gt;
+
+
+  &lt;link href=&#34;../../../../css/style.default.css&#34; rel=&#34;stylesheet&#34; id=&#34;theme-stylesheet&#34;&gt;
+
+
+&lt;link href=&#34;../../../../css/custom.css&#34; rel=&#34;stylesheet&#34;&gt;
+&lt;link rel=&#34;shortcut icon&#34; href=&#34;../../../../img/favicon.png&#34;&gt;
+
+
+&lt;script&gt;
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga(&#39;create&#39;, &#39;UA-89721810-1&#39;, &#39;auto&#39;);
+ga(&#39;send&#39;, &#39;pageview&#39;);
+&lt;/script&gt;
+&lt;script async src=&#39;//www.google-analytics.com/analytics.js&#39;&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&#34;all&#34;&gt;
+      &lt;div class=&#34;container-fluid&#34;&gt;
+          &lt;div class=&#34;row row-offcanvas row-offcanvas-left&#34;&gt;
+              
+&lt;div id=&#34;sidebar&#34; class=&#34;col-sb-fixedpos col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas&#34;&gt;
+  &lt;div class=&#34;sidebar-content&#34;&gt;
+    &lt;h1 class=&#34;sidebar-heading&#34;&gt;&lt;a href=&#34;../../../../&#34;&gt;Vincent Zhang&lt;/a&gt;&lt;/h1&gt;
+
+    &lt;ul class=&#34;sidebar-menu&#34;&gt;
+      
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../&#34;&gt;Home&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../about/&#34;&gt;About&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../projects/&#34;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../blog/&#34;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href=&#34;../../../../contact/&#34;&gt;Get in touch&lt;/a&gt;&lt;/li&gt;
+      
+
+       
+
+&lt;div class=&#34;panel panel-default sidebar-menu&#34;&gt;
+
+   
+
+    &lt;div class=&#34;panel-body&#34;&gt;
+        &lt;form action=&#34;//google.com/search&#34; method=&#34;get&#34; accept-charset=&#34;UTF-8&#34; role=&#34;search&#34;&gt;
+            &lt;div class=&#34;input-group&#34;&gt;
+                &lt;input type=&#34;search&#34; name=&#34;q&#34; results=&#34;0&#34; class=&#34;form-control&#34; placeholder=&#34;Search&#34;&gt;
+                &lt;input type=&#34;hidden&#34; name=&#34;q&#34; value=&#34;site:/&#34;&gt;
+                &lt;span class=&#34;input-group-btn&#34;&gt;
+                    &lt;button type=&#34;submit&#34; class=&#34;btn btn-template-main&#34;&gt;&lt;i class=&#34;fa fa-search&#34;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+ 
+
+      
+
+
+
+
+
+ 
+
+      
+
+
+&lt;div class=&#34;panel sidebar-menu&#34;&gt;
+    &lt;div class=&#34;panel-heading&#34;&gt;
+        &lt;h3 class=&#34;panel-title&#34;&gt;Tags&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;panel-body&#34;&gt;
+        &lt;ul class=&#34;tag-cloud&#34;&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/air-quality&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; air-quality&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/data-viz&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; data-viz&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/eda&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; eda&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/github&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; github&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/learning&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; learning&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/ml&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; ml&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/nba&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; nba&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/nlp&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; nlp&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/python&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; python&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/r&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; r&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/rnn&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; rnn&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/sql&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; sql&lt;/a&gt;
+            &lt;/li&gt;
+            
+            &lt;li&gt;&lt;a href=&#34;../../../../tags/timeseries&#34;&gt;&lt;i class=&#34;fa fa-tags&#34;&gt;&lt;/i&gt; timeseries&lt;/a&gt;
+            &lt;/li&gt;
+            
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+ 
+
+    &lt;/ul&gt;
+    &lt;p class=&#34;social&#34;&gt;
+  
+  
+  
+  &lt;a href=&#34;https://twitter.com/Mr_AppleV&#34; data-animate-hover=&#34;pulse&#34; class=&#34;external twitter&#34;&gt;
+    &lt;i class=&#34;fa fa-twitter&#34;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  
+  
+  
+  &lt;a href=&#34;mailto:jpzhang@ucdavis.edu&#34; data-animate-hover=&#34;pulse&#34; class=&#34;email&#34;&gt;
+    &lt;i class=&#34;fa fa-envelope&#34;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  
+  
+  &lt;a href=&#34;https://www.linkedin.com/in/jpzhangv&#34; data-animate-hover=&#34;pulse&#34;&gt;
+    &lt;i class=&#34;fa fa-linkedin&#34;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  
+  
+  
+&lt;a href=&#34;https://www.github.com/jpzhangvincent&#34;&gt;
+  &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;
+&lt;/a&gt;
+
+&lt;/p&gt;
+
+
+    &lt;div class=&#34;copyright&#34;&gt;
+      &lt;p class=&#34;credit&#34;&gt;
+        
+          &amp;copy;2016 Vincent Zhang
+        
+        | Template by &lt;a href=&#34;https://bootstrapious.com/free-templates&#34; class=&#34;external&#34;&gt;Bootstrapious.com&lt;/a&gt;
+
+&amp;amp; ported to Hugo by &lt;a href=&#34;https://github.com/kishaningithub&#34;&gt;Kishan B&lt;/a&gt;
+
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;col-xs-12 col-sm-8 col-md-9 content-column white-background col-main-fixedpos&#34;&gt;
+  &lt;div class=&#34;small-navbar visible-xs&#34;&gt;
+  &lt;button type=&#34;button&#34; data-toggle=&#34;offcanvas&#34; class=&#34;btn btn-ghost pull-left&#34;&gt; &lt;i class=&#34;fa fa-align-left&#34;&gt; &lt;/i&gt;Menu&lt;/button&gt;
+  &lt;h1 class=&#34;small-navbar-heading&#34;&gt;&lt;a href=&#34;../../../../&#34;&gt;Vincent Zhang&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+  &lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-lg-8&#34;&gt;
+      &lt;div class=&#34;content-column-content&#34;&gt;
+         &lt;h1&gt;&lt;/h1&gt;
+         
+
+&lt;h1 id=&#34;reusable-updating-radarchart&#34;&gt;reusable updating radarChart&lt;/h1&gt;
+
+&lt;p&gt;###Design based on original by &lt;a href=&#34;https://twitter.com/NadiehBremer&#34;&gt;NadiehBremer&lt;/a&gt; at &lt;a href=&#34;http://www.visualcinnamon.com/2015/10/different-look-d3-radar-chart.html&#34;&gt;Visual Cinnamon&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;###Coding philosophy inspired by &lt;a href=&#34;http://www.toptal.com/d3-js/towards-reusable-d3-js-charts&#34;&gt;Rob Moore&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;####&lt;a href=&#34;http://tennisvisuals.com/examples/MatchRadar.html&#34;&gt;See this block in production with Live Data&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;find-the-latest-code-on-github-https-github-com-tennisvisuals-updating-radar-chart&#34;&gt;&lt;a href=&#34;https://github.com/TennisVisuals/updating-radar-chart&#34;&gt;Find the Latest Code on GitHub&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;#####I figured out enter/exit/update for nested objects by studying &lt;a href=&#34;http://bl.ocks.org/LeeMendelowitz/11383724&#34;&gt;Lee Mendelowitz&amp;rsquo;s block&lt;/a&gt; and reviewing &lt;a href=&#34;https://groups.google.com/forum/#!topic/d3-js/5AxgsKK31EA&#34;&gt;Mike&amp;rsquo;s comments&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;###Features:
+- Separate layer for hover objects which need to remain on top of chart
+- Separate layer for tooltip which needs to be uppermost layer
+- Events are configurable as options such that external functions can be seamlessly integrated
+ - e.g. external tooltips can be configured for mouseover events&lt;/p&gt;
+
+&lt;p&gt;###Accessors:
+####&lt;em&gt;by default accessors with no parameters return current values&lt;/em&gt;
+- chart.duration(transition-time) // duration of transitions
+- chart.options(object) // many options don&amp;rsquo;t have accessors
+- chart.width(width)
+- chart.height(height)
+- chart.margins(object)
+- chart.data(data) // set data
+- chart.update() // update chart
+- chart.maxValue(value) // maxValue of axis values
+- chart.levels(value) // number of ring levels
+- chart.opacity(value) // opacity of unselected areas
+- chart.borderWidth(value) // width of border surrounding areas
+- chart.rounded(true/false) // select rounded areas
+- chart.events(object) &amp;ndash; chart.events({&amp;lsquo;legend&amp;rsquo;: {&amp;lsquo;mouseover&amp;rsquo;: null}})
+- chart.color(d3.scale)
+- chart.colors(object) &amp;ndash; chart.colors({&amp;lsquo;axis1&amp;rsquo;: &amp;lsquo;color1&amp;rsquo;, &amp;lsquo;axis2&amp;rsquo;: &amp;lsquo;color2&amp;rsquo;})&lt;/p&gt;
+
+&lt;p&gt;#####operations on data held in chart instance
+- chart.pop()
+- chart.push(row) -or- chart.push([row, row])
+- chart.shift()
+- chart.unshift(row) -or- chart.unshift([row, row])
+- chart.slice(begin, end)&lt;/p&gt;
+
+&lt;p&gt;#####operations performed on data prior to display
+- chart.invert(axis) -or- chart.invert([axis, axis]) // index or &amp;ldquo;axis label&amp;rdquo;
+- chart.ranges({&amp;lsquo;axis&amp;rsquo;: [min, max]})
+- chart.filterAxes(&amp;lsquo;axis&amp;rsquo;) -or- chart.filterAxes([&amp;lsquo;axis&amp;rsquo;, &amp;lsquo;axis&amp;rsquo;])
+- chart.filterAreas(&amp;lsquo;key&amp;rsquo;) -or- chart.filterAreas([&amp;lsquo;key1&amp;rsquo;, &amp;lsquo;key2&amp;rsquo;])&lt;/p&gt;
+
+&lt;p&gt;#####convenience
+- chart.keys() // return a list of data keys
+- chart.axes() // return labels of all axes
+- chart.nodes() // return svg object&lt;/p&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script src=&#34;../../../../js/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/jquery.cookie.js&#34;&gt; &lt;/script&gt;
+&lt;script src=&#34;../../../../js/ekko-lightbox.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/jquery.scrollTo.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/masonry.pkgd.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/imagesloaded.pkgd.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/owl.carousel.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/front.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../../../../js/backtotop.js&#34;&gt;&lt;/script&gt; 
+
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
     
     <item>
       <title>About Me</title>
-      <link>https://liwy1113.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://liwy1113.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;div id=&#34;who-am-i&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Who am I?&lt;/h3&gt;
 &lt;p&gt;I am a Master student of Statistics at UC Davis. I guess you are here because you want to know a bit about me, huh? My interests include statistics, data analysis, data science and machine learning. This website is the home of my data projects and tutorials. Also I’m happy to share what I’ve learned so far. My ultimate goal is to contribute my personal skills and experience to the technology and community.&lt;/p&gt;
@@ -31,7 +854,7 @@
 &lt;div id=&#34;skills-interests-in-data-science&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Skills &amp;amp; Interests in Data Science&lt;/h3&gt;
 &lt;p&gt;Studing applied mathematics and statistics for 6 years, I have taken courses including Machine Learning, Statistical Computing, Categorical Data Analysis, Algorithm Design and so on. I am comfortable working with R, Python, SQL programming languages, and also experienced in using data visualization tools like Tableau and R-shiny. I have been extensively involved in working in the field of data as part of my academic projects and internships. My multiple practical experience gave me the experience and confidence to develop solutions to complex analytic challenges and real-world problems.&lt;/p&gt;
-&lt;p&gt;So how can we learn from data? As an enthusiast of data science, I am motivated by the belief that data can be used to make better decisions. I am interested in exploring various facets of data science. Now I am focus on maching learning and information visualization to augment my professional experience. I will keep learning and practicing in the future, using data to inform decisions that positively affect user experience for companies.&lt;/p&gt;
+&lt;p&gt;How can we learn from data? As an enthusiast of data science, I am motivated by the belief that data can be used to make better decisions. I am interested in exploring various facets of data science. Now I am focus on maching learning and information visualization to augment my professional experience. I will keep learning and practicing in the future, using data to inform decisions that positively affect user experience for companies.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

@@ -2,74 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/projects/mobileappmarketanalysis/mobileappanalysis/</loc>
+    <loc>https://liwy1113.github.io/projects/mobileappmarketanalysis/mobileappanalysis/</loc>
     <lastmod>2017-03-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/db_map/geographical_data_analysis/</loc>
+    <loc>https://liwy1113.github.io/projects/db_map/geographical_data_analysis/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/face_emotion/face_emotion/</loc>
+    <loc>https://liwy1113.github.io/projects/face_emotion/face_emotion/</loc>
     <lastmod>2016-06-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/index_files/d3-legend/readme/</loc>
+    <loc>https://liwy1113.github.io/projects/mobileappmarketanalysis/bad_rev/</loc>
   </url>
   
   <url>
-    <loc>/about/index_files/d3/readme/</loc>
+    <loc>https://liwy1113.github.io/projects/mobileappmarketanalysis/good_rev/</loc>
   </url>
   
   <url>
-    <loc>/about/index_files/radarchart/readme/</loc>
+    <loc>https://liwy1113.github.io/projects/mobileappmarketanalysis/improved_apps/</loc>
   </url>
   
   <url>
-    <loc>/projects/mobileappmarketanalysis/bad_rev/</loc>
+    <loc>https://liwy1113.github.io/projects/mobileappmarketanalysis/worsen_apps/</loc>
   </url>
   
   <url>
-    <loc>/projects/mobileappmarketanalysis/good_rev/</loc>
-  </url>
-  
-  <url>
-    <loc>/projects/mobileappmarketanalysis/improved_apps/</loc>
-  </url>
-  
-  <url>
-    <loc>/projects/mobileappmarketanalysis/worsen_apps/</loc>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
+    <loc>https://liwy1113.github.io/about/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://liwy1113.github.io/about/</loc>
   </url>
   
   <url>
-    <loc>/contact/</loc>
+    <loc>https://liwy1113.github.io/contact/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/contact/</loc>
+    <loc>https://liwy1113.github.io/contact/</loc>
   </url>
   
   <url>
-    <loc>/projects/</loc>
+    <loc>https://liwy1113.github.io/projects/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://liwy1113.github.io/</loc>
     <lastmod>2017-03-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

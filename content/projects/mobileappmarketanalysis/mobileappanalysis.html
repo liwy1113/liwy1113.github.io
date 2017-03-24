@@ -1,0 +1,158 @@
+---
+date: "2017-03-22"
+title: "Mobile App Market Analysis"
+showonlyimage: false
+draft: false
+image: "projects/mobileappmarketanalysis/app.png"
+weight: 2
+type: "post"
+author: "Wenyu Li"
+description: "The explosive growth of the mobile application (app) market has made it difficult for users to find the most interesting and relevant apps from the hundreds of thousands that exist today. We are interested to analyze the quality of apps and understand the user experiences of using mobile apps on the Itune App Store."
+---
+
+<link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#data-collection">Data Collection</a></li>
+<li><a href="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
+<li><a href="#nlp-&amp;-machine-learning?">NLP &amp; Machine Learning</a></li>
+<li><a href="#Conclusion">Conclusion and Discussion</a></li>
+</ul>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>The explosive growth of the mobile application (app) market has made it difficult for users to find the most interesting and relevant apps from the hundreds of thousands that exist today. We are interested to analyze the quality of apps and understand the user experiences of using mobile apps on the Itune App Store. We think these insights would be helpful for the developers to design better apps, as well as for Apple to better manage the App Store. For example, a good app recommendation system would rely on understanding the quality of apps by predicting their ratings. In this project, we would go through the data science cycle including problem/data curations, data management, data analytics and result-oriented presentations through data visualization.</p>
+<p>We are particularily interested in the following questions:</p>
+<ol style="list-style-type: decimal">
+<li>How do we define the quality of an app?<br />
+</li>
+<li>Do in-app purchases significantly affect the apps’ ratings, especially for gaming apps?<br />
+</li>
+<li>How do people comment on their user experiences of apps?<br />
+</li>
+<li>Are there any different characteristics/topics in new version descriptions for apps with their ratings improved/lowered?<br />
+</li>
+<li>Can we predict the rating of the new version for an app?</li>
+</ol>
+<p>In our workflow, firstly, we used <code>scrapy</code>, a high level web scraping framework to collect our data from Itune App Store and then stored the data in the NoSQL database - MongoDB. We explored our data with <code>pandas</code> and <code>statsmodel</code> for hypothesis testing. Then, we used <code>nltk</code> for NLP, <code>sckit-learn</code> for machine learning and <code>gensim</code> for topic modeling. For visualization, we use <code>plotly</code> and <code>pyLDAvis</code> and we share our insights through <code>Jupyter notebook</code>. We collaborate and manage the project on our shared <a href="https://github.com/jpzhangvincent/MobileAppMarketAnalysis">Github</a> directory based on the <a href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>.</p>
+<p><img src="/projects/mobileappmarketanalysis/output_3_0.png" width="80%" /></p>
+</div>
+<div id="data-collection" class="section level2">
+<h2>Data Collection</h2>
+<p>To collect our data, we found the Apple’s Itune app store websites provide a lot of useful information and they share a consistent web design pattern which makes web scraping easier. Note that we only collected the first indexing pages of different categories since they are shown as most popular apps. Then we scraped different links of apps. An example of <a href="https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8">Spotify Music</a> is showed below. Thus, our goal is to collect and store the various information on the web page for each app. We also identify some interesting characteristics, such as <code>Is_Multilingual</code>, <code>Is_Multiplatform</code> and <code>Has_InAppPurchased</code>. In the end, we collected about 5600 unique apps from ITune App Store and sotred into the Mongo Database.</p>
+<p><img src="/projects/mobileappmarketanalysis/output_6_0.png" width="80%" /> <img src="/projects/mobileappmarketanalysis/output_7_0.png" width="80%" /></p>
+</div>
+<div id="exploratory-data-analysis" class="section level2">
+<h2>Exploratory Data Analysis</h2>
+<div id="distribution-of-most-popular-apps-in-terms-of-category-and-overall-rating" class="section level3">
+<h3>Distribution of most popular Apps in terms of category and overall rating</h3>
+<p>Let’s check out the distribution of apps in terms of category and rating first. First, we can read the data from the MongoDB database. The following is the code snippet to show how we connect to MongoDB and extract the data through simple query.</p>
+<p>We created a plotly inteactive bar chart to show the distribution.</p>
+<iframe width="800" height="600" frameborder="0" scrolling="no" src="//plot.ly/~mrapple/88.embed">
+</iframe>
+<p>We can see that the Entertainment, Lifestyle and Photo types of apps are the most popular in terms of number of apps in our collection. Besides, the health&amp;Fitness and Photo categories have the largest portions of high rated apps(Overall rating &gt; 4).</p>
+</div>
+<div id="how-to-define-the-quality-of-apps" class="section level3">
+<h3>How to define the quality of apps?</h3>
+<p>We found that the dataset has current rating(numerical variable) and overall rating(categorical) and often times the overall rating won’t be updated until the new version releases, which could be biased. We have to define a more balanced metric to evaluate the quality of an app to facilitate our further analysis.</p>
+<p><span class="math display">\[
+\frac{number\;of\;current\;rating}{number\;of\;overall\;rating}* current\;rating + (1-\frac{number\;of\;current\;rating}{number\;of\;overall\;rating})* overall\;rating
+\]</span></p>
+<p>Although our metric is not perfect, it does help correct the bias for apps that didn’t account for the new current ratings efficiently.</p>
+<iframe width="800" height="600" frameborder="0" scrolling="no" src="//plot.ly/~mrapple/90.embed">
+</iframe>
+</div>
+<div id="does-in-app-purchases-significantly-affect-the-user-experiences-of-apps" class="section level3">
+<h3>Does in-app purchases significantly affect the user experiences of apps?</h3>
+<p>When looking at the reviews, there seem to be two kinds of thoughts about paid apps among users. The first is the common folk wisdom that “you get what you pay for”, which is usually positive. The second kind of thought is that expensive apps are not worth buying, so those users would complain about the price tags. We want to run a statistical test to see whether in-app purchases significantly affect the user experiences of apps. Here, we would use the weighted rating we derived from the last step as the proxy of user experience for mobile apps.</p>
+<p>We can answer this question by doing hypothesis testing. Since the distribution of ratings are not normal, obviously we can’t use t-test or one-way ANOVA test. Thus, we prefer to use Kruskal-Wallis H-test, a non-parametric test which only requires the independence assumption.</p>
+<p><span class="math inline">\(H_0:\)</span> The medians of two groups are the same. <span class="math inline">\(H_1\)</span>: The medians of two groups are different.</p>
+<pre class="python"><code>free_df = apps_df[(apps_df[&#39;is_InAppPurcased&#39;] == 0)&amp;(pd.notnull(apps_df[&#39;overall_rating&#39;]))][[&quot;name&quot;,&quot;overall_rating&quot;, &quot;current_rating&quot;, &#39;num_current_rating&#39;, &quot;num_overall_rating&quot;]]
+paid_df = apps_df[(apps_df[&#39;is_InAppPurcased&#39;] == 1)&amp;(pd.notnull(apps_df[&#39;overall_rating&#39;]))][[&quot;name&quot;,&quot;overall_rating&quot;, &quot;current_rating&quot;, &#39;num_current_rating&#39;, &quot;num_overall_rating&quot;]]
+free_df[&#39;weighted_rating&#39;] = map(lambda a, b, c,d: np.divide(a,b)*c+(1-np.divide(a,b))*d, free_df[&#39;num_current_rating&#39;], 
+                                   free_df[&#39;num_overall_rating&#39;], free_df[&#39;current_rating&#39;], free_df[&#39;overall_rating&#39;])
+paid_df[&#39;weighted_rating&#39;] = map(lambda a, b, c,d: np.divide(a,b)*c+(1-np.divide(a,b))*d, paid_df[&#39;num_current_rating&#39;], 
+                                   paid_df[&#39;num_overall_rating&#39;], paid_df[&#39;current_rating&#39;], paid_df[&#39;overall_rating&#39;])
+free = list(free_df[&#39;weighted_rating&#39;])
+paid = list(paid_df[&#39;weighted_rating&#39;])
+scipy.stats.kruskal(free, paid)</code></pre>
+<p>KruskalResult(statistic=187.92790428584749, pvalue=9.0081895155668011e-43)</p>
+<p><img src="/projects/mobileappmarketanalysis/output_23_0.png" width="60%" /></p>
+<p>Thus, we can reject the null hypothesis. It’s significant that providing in-app purchases does influent the user experiences of an app. The density plot seems to verify that the median weighted rating for paid apps should be higher than that of apps without in-app purchases.</p>
+</div>
+<div id="do-multiple-languages-influent-the-quality-of-apps" class="section level3">
+<h3>Do multiple languages influent the quality of apps?</h3>
+<p>Since apps with more than one languages can attract people with different native languages, so we get curious about the relationship between app quality(weighted rating) and whether the app has multiple languages. With the similar reasoning, we run a Kruskal-Wallis H-test.</p>
+<p><img src="/projects/mobileappmarketanalysis/output_27_0.png" width="63%" /></p>
+<p>he null hypothesis is median quality for single-language apps and median quality for apps with multiple languages are the same. The alternative hypothesis is that the median quality for these two samples are not the same. For the result, we got p value significantly smaller than 0.05; so we should reject null hypothesis at significance level 0.05. Thus, we should conclude that the median of quality for these two samples are not the same and multiple languages do influent the quality of an app. The density plot seems to verify that the median weighted rating for apps with multiple languages is higher than that of apps with single language.</p>
+</div>
+</div>
+<div id="nlp-machine-learning" class="section level2">
+<h2>NLP &amp; Machine Learning</h2>
+<div id="topic-modeling-how-do-people-comment-on-their-user-experiences-of-apps-how-do-developers-usually-talk-about-their-new-version-updates" class="section level3">
+<h3>Topic Modeling: How do people comment on their user experiences of apps? How do developers usually talk about their new version updates?</h3>
+<p>Discoverying the relevant and desired information from app reviews and new version description is useful for us to have a sense about the quality and problems of each app. For example, by analyzing the review comments, we can know what “topics” the users are most concerned about for an app; by analyzing the new version description and associating with the rating changes, we can investigate whether there are any different characteristics/topics in new version descriptions for apps with their ratings improved/lowered. One such technique in the field of text mining is Topic Modeling, which can be used to fetch the information that we are looking for. Topic Modeling is a process to automatically identify topics present in a text object and to derive hidden patterns exhibited by a text corpus. It’s different from rule-based text mining approaches that use regular expressions or dictionary based keyword searching techniques. It is an unsupervised learning approach used for finding and observing the relavant key words in large clusters of texts.</p>
+<p><b>Questions:</b></p>
+<ol style="list-style-type: decimal">
+<li>For app reviews analysis, here we define the good and bad quality apps based on the quality metric we created. Meanwhile, we choose the good reviews and bad reviews based on the review rating. If the review rating is no less than 4.0, it can be seen as a good review. If the review rating is no more than 2.5, it can be seen as a bad review. For more details, please refer to this <a href="https://github.com/jpzhangvincent/MobileAppMarketAnalysis/blob/master/notebooks/LDA%20for%20Topic%20Modeling%20(Q5).ipynb">notebook</a><br />
+</li>
+<li>For new version desctiption analysis, we used histogram to show the distribution of the ratio of number of current rating to overall rating as, which is used as a criterion to reduce the influences of lack of number of ratings for new version. We only used the app data whose ratio is over 10%. We diveded the rest data into two parts by using the difference between current rating and overall rating. we defined the improved apps as the differences are larger than 0.1, the worsen appes as the differences are smaller than -0.1. For more details, please refer to this <a href="https://github.com/jpzhangvincent/MobileAppMarketAnalysis/blob/master/notebooks/patterns%20for%20the%20apps%20improving%20higher%20current%20version%20ratings%20comparing%20to%20overall%20ratings.ipynb">notebook</a></li>
+</ol>
+<p><b>Cleaning and Preprocessing:</b></p>
+<p>Data cleaning is essencial for generating a useful topic model. The steps below are common to most natural language processing methods:</p>
+<ul>
+<li>Tokenizing: converting a document to its atomic elements.</li>
+<li>Stopping: removing meaningless words.</li>
+<li>Stemming: merging words that are equivalent in meaning.</li>
+</ul>
+<p><b>Latent Dirichlet Allocation</b></p>
+<p>Latent Dirichlet Allocation is the most popular topic modeling technique. LDA assumes documents are produced from a mixture of topics. Those topics then generate words based on their probability distribution. Given a dataset of documents, LDA backtracks and tries to figure out what topics would create those documents in the first place. LDA is a matrix factorization technique. In vector space, any corpus (collection of documents) can be represented as a document-term matrix. The number of words we chose for every topic is 5. Here we used <code>pyLDAvis</code> package to get the interactive topic modeling visualization. The topic modeling visualization for high-rated apps is showed below:</p>
+<p><img src="/projects/mobileappmarketanalysis/good.png" width="80%" /></p>
+<p><img src="/projects/mobileappmarketanalysis/bad.png" width="80%" /></p>
+<p>This visualization is better that word-cloud since it’s more statistically sound and more comprehensive. You can select specific topic using the selection bar on the left top. The right part shows the top 30 relevent terms for each topic. By comparing the comments for high-rated and low-rated apps, we found that</p>
+<p>For good apps, the comments have common features like:<br />
+1. It’s free have some good features that satisfy customers’demand.<br />
+2. It has good content and display, and customers are comfortable at vision, like screen.<br />
+3. The speed is fast and low latency.<br />
+4. It is responsive to provide helps.</p>
+<p>For the bad apps, from the result, we can see most topics include the word “time”. We can infer that the speed and latency is the priority concern for users. Also, “money”, “price” and “payment” occur, which shows price or in-app purchases can be disturbing.</p>
+<p>We did similar topic modeling on the new version description with 3 topics since we have smaller corpus. This <a href="https://github.com/jpzhangvincent/MobileAppMarketAnalysis/blob/master/notebooks/patterns%20for%20the%20apps%20improving%20higher%20current%20version%20ratings%20comparing%20to%20overall%20ratings.ipynb">notebook</a> contains the code.</p>
+<p>The topic modeling visualization for low-rated apps is showed below:</p>
+<p>Note that firstly we just filtered the common stop words then we found that main topics of the two parts apps are similar, they both contains ‘fixed bugs’, ‘new features’, ‘upgrade’, which means there is no different topics for the improved and worse apps’ new version description. Then, we tried to add the same key topic words of two parts into the stop words. Interestingly, we got more different key topic words of improved apps and worsen apps. For the improved apps, the new version description usually relates to “some improvements on interface”, “ask for feedbacks” and “ask for reviews on app store”. And for the worsen apps, the common main topics reflects on issues related to “ipad version”, “music and video functions” and “account”.</p>
+<p><b>Tips to improve results for LDA</b></p>
+<p>Running LDA Model (Batch Wise LDA)<br />
+In order to retrieve most important topic terms, a corpus can be divided into batches of fixed sizes. Running LDA multiple times on these batches will provide different results, however, the best topic terms will be the intersection of all batches.</p>
+<p>Part of Speech Tag Filter<br />
+POS tag filter is more about the context of the features than frequencies of features. Topic Modelling tries to map out the recurring patterns of terms into topics. However, every term might not be equally important contextually. For example, POS tag IN refers to terms such as “within”, “upon”, “except”. “CD” contains “one”,“two”,“hundred and etc.”MD&quot; means “may”, “must” etc. These terms are the supporting words of a language and can be removed by their post tags.</p>
+</div>
+<div id="supervised-learning-can-you-predict-the-rating-of-the-new-version-for-an-app" class="section level3">
+<h3>Supervised learning: Can you predict the rating of the new version for an app?</h3>
+<p>As we know, new versions &amp; updates are very common and important for developers to improve their apps quality as well as collect feedback. We would like to build a model to predict the app rating when new version is released. This could be valuable for developer to have a better sense about their product. What’s more, it could be useful for recommendation system for new apps when the ratings are not available yet. We extracted some useful features from the dataset. Note that our goal is to predict the new version rating, thus it doesn’t make sense to use features that are relavent to the period after the new version release. We can’t use the features like user reviews and number of current ratings. We will use the following features:</p>
+<p><strong>App characteristics</strong></p>
+<ul>
+<li>overall rating(category)</li>
+<li>App category (category)</li>
+<li>Is_InAppPurcase(category)</li>
+<li>Is_multilingual(category)</li>
+<li>Is_multiplatform(category)</li>
+<li>Number of overall rating(log transform)</li>
+<li>AppFileSize(log transform)</li>
+<li>Time range between release date and extraction date(log transform)</li>
+</ul>
+<p><strong>Text Features from descriptions</strong>:</p>
+<ul>
+<li>lengthOfText(character level)</li>
+<li>NumOfwords(word level)</li>
+<li>polarity</li>
+<li>subjectivity</li>
+</ul>
+<p>Aftet we clean the data and feature extraction, we are ready for building our machine learning model. Since the target variable current_rating is a continuous variable, it’s obviously a regression problem. With the fantastic scikit-learn package, we used the ElasticNet and RandomForestRegressor models since they are good at controlling overfitting and have fast computation. For the time being, we have experimented and compared these two models based on the features extracted from the last step. With proper cross validation model evaluation and parameter tuning, the prediction results on the test set are shown below. For more details, please check out the <a href="https://github.com/jpzhangvincent/MobileAppMarketAnalysis/blob/master/notebooks/PredictNewAppVersionRating(Q7).ipynb">notebook</a></p>
+<p><img src="/projects/mobileappmarketanalysis/output_42_0.png" width="45%" /></p>
+<p><img src="/projects/mobileappmarketanalysis/output_43_0.png" width="80%" /></p>
+<p>We can see that the optimized Random Forest Regressor performs a little better. However, there is room to improve the model performance considering the R square is just about 0.547. To improve the prediction, since the description usually reveals the features of the apps, we can try to incorporate the raw text data and see whether we can improve our model performance, which could indicate the desciption has some predictive power for user experiences and app quality. In future, we can combine the word representation features into the <code>pipeline</code> with <code>FeatureUnion</code> in <code>sckit-learn</code>.</p>
+</div>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>There have been surveys showing that people spend more and more time on mobile devices. It shows that mobile apps are becoming increasingly ubiquitous in our daily life. In this project, we analyze the mobile market from different angles. From the developer’s perscpective, how to create a good app and what the users care about are the most important questions. From the user and App Store administrator’s perspective, how to measure and predict the app quality would be of greatest interest. We used statistical and machine learning methods to solve these questions. For data collecting, we established the infrastructure to smoothly collect data with the Scrapy framework, store and manage data in MongoDB. By creating customized metric to define the quality of apps, we conducted exploratory data analysis to answer questions like whether in-app purchases and multiple languages significantly affect the apps’ ratings. Meanwhile, we applied Latent Dirichlet Allocation for topic modeling method to explore how people comment on user experiences of apps and what kind of characteristics for new version description of apps could have impact on improving or decreasing the app ratings. To predict the ratings of the new version for an app, we applied generalized linear model and random forest regression which achieve reasonable performance. In future, we plan to improve our ratings prediction model and build a Flask web Dashboard to better engage with possible stakeholders - app users, developers/marketers and App Store Adminstrators.</p>
+</div>

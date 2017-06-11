@@ -2,67 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://liwy1113.github.io/projects/groundwater/groundwater/</loc>
+    <loc>/projects/groundwater/groundwater/</loc>
     <lastmod>2017-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/projects/mobileappmarketanalysis/mobileappanalysis/</loc>
+    <loc>/projects/mobileappmarketanalysis/mobileappanalysis/</loc>
     <lastmod>2017-03-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/projects/db_map/geographical_data_analysis/</loc>
+    <loc>/projects/db_map/geographical_data_analysis/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/projects/face_emotion/face_emotion/</loc>
+    <loc>/projects/face_emotion/face_emotion/</loc>
     <lastmod>2016-06-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/projects/mobileappmarketanalysis/bad_rev/</loc>
+    <loc>/about/index_files/d3-legend/readme/</loc>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/projects/mobileappmarketanalysis/good_rev/</loc>
+    <loc>/about/index_files/d3/readme/</loc>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/projects/mobileappmarketanalysis/improved_apps/</loc>
+    <loc>/about/index_files/radarchart/readme/</loc>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/projects/mobileappmarketanalysis/worsen_apps/</loc>
+    <loc>/projects/mobileappmarketanalysis/bad_rev/</loc>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/about/</loc>
+    <loc>/projects/mobileappmarketanalysis/good_rev/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/mobileappmarketanalysis/improved_apps/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/mobileappmarketanalysis/worsen_apps/</loc>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/about/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/contact/</loc>
+    <loc>/contact/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/contact/</loc>
+    <loc>/contact/</loc>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/projects/</loc>
+    <loc>/projects/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liwy1113.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2017-03-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

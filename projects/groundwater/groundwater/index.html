@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Groundwater Level Spatial Data Analysis</title>
+<meta name="description" content="Describe your website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="../../../css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../css/owl.carousel.css">
+<link rel="stylesheet" href="../../../css/owl.theme.css">
+<link rel="stylesheet" href="../../../css/github-gist.css">
+<script src="../../../js/highlight.pack.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  <link href="../../../css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+
+<link href="../../../css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="../../../img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              
+<div id="sidebar" class="col-sb-fixedpos col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="../../../">Wenyu Li</a></h1>
+
+    <ul class="sidebar-menu">
+      
+      
+        <li><a href="../../../">Home</a></li>
+      
+        <li><a href="../../../about/">About</a></li>
+      
+        <li><a href="../../../projects/">Projects</a></li>
+      
+        <li><a href="../../../contact/">Get in touch</a></li>
+      
+
+       
+
+<div class="panel panel-default sidebar-menu">
+
+   
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" results="0" class="form-control" placeholder="Search">
+                <input type="hidden" name="q" value="site:/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+ 
+
+      
+
+ 
+
+      
+ 
+
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a href="mailto:wyuli@ucdavis.edu" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="https://www.linkedin.com/in/wenyu-li/" data-animate-hover="pulse">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  
+<a href="https://github.com/liwy1113">
+  <i class="fa fa-github"></i>
+</a>
+
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2017 Wenyu Li
+        
+        | Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background col-main-fixedpos">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="../../../">Wenyu Li</a></h1>
+</div>
+
+
+            <div class="row">
+                  <div class="col-sm-4">
+                    <div class="image">
+                      <img src="../../../projects/groundwater/groundwater.png" class="img-responsive" alt="">
+                    </div>
+                  </div>
+
+                  <div class="col-md-8">
+                      <h2>Groundwater Level Spatial Data Analysis</h2>
+                          <p class="author-category">
+                            Wenyu Li
+                          </p>
+
+                          <p class="date-comments">
+                          <i class="fa fa-calendar-o"></i> March 8, 2017
+                          </p>
+
+                          <ul class="tags-cloud">
+                          
+                          </ul>
+                   
+                            
+
+                          
+                  
+                      </div>
+                    </div>
+                  </br>
+
+<div class="row">
+   <div class="content-column-content">
+          <div class="col-lg-8">
+
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#data">Data</a></li>
+<li><a href="#goals">Goals</a></li>
+</ul></li>
+<li><a href="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
+<li><a href="#bayesian-spatial-temporal-modeling">Bayesian Spatial Temporal Modeling</a></li>
+<li><a href="#other-ideas">Other ideas</a></li>
+</ul>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Groundwater monitoring and management is an essential issue in California because groundwater has tremendous values as a component of the hydrologic cycle for the environment and argriculture. We aim to research on groundwater basins to support decisions around water reliability and resource sustainability by better understanding the groundwater levels change with respects to time and space. Through some literature research, spatial-temporal analysis and modeling is suitable for this project.</p>
+<div id="data" class="section level3">
+<h3>Data</h3>
+<p>The data is provided from the Center for Water-Electricity Efficiency, which is also public available from the <a href="http://www.water.ca.gov/groundwater/data_and_monitoring/index.cfm">California Department of Water Resources</a>. Besides, as we know that groundwater is very related to argriculture usage, we are specially interested in some probably useful variables to predict the ground water levels. Thus, we incorporate the evapotranspiration(ETo) data from the <a href="http://wwwcimis.water.ca.gov/SpatialData.aspx">California Irrigation Management Information System (CIMIS)</a> which currently manages over 145 active weather stations throughout the state. ETo data is often used as a proxy metric to indicate the demand of argriculture water usage. Most of the CIMIS stations produce estimates of reference evapotranspiration (ETo) for the station location and their immediate surroundings, often in agricultural areas. In the end, we had to clean and process the data sources to merge the well information, monthly ETo data and the groundwater measurement data. Note that we focused on the San Joquain Valley as our first investigation, since the spatial-temporal analysis and modeling tends to be more robust and sound in the relatively same area. We used the data from 2011 to 2016 as the training set to train our model and the data of 2017 as the test set for model evaluation. Outlying cases had been removed for robustness concern in modeling. The initial data cleaning script can be found <a href="https://github.com/jpzhangvincent/GroundwaterLevelSpatialDataProject/blob/master/Analysis/Data_Cleaning.R">here</a>.</p>
+</div>
+<div id="goals" class="section level3">
+<h3>Goals</h3>
+<p>We know that some well locations track significantly more records of groundwater levels while other locations have missing values problems. Surface interpolation is common in spatial data analysis. On the other hand, forcasting on the time series of groundwater levels at a certain location would be also very useful. Thus, the goals of spatial-temporal modeling are two-folds: 1. Interpolate the missing values of groundwater levels at well locations 2. Forecast groundwater level at a certain time and location</p>
+</div>
+</div>
+<div id="exploratory-data-analysis" class="section level2">
+<h2>Exploratory Data Analysis</h2>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 3.2.5</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.2.5</code></pre>
+<pre><code>## Warning: package &#39;tibble&#39; was built under R version 3.2.5</code></pre>
+<pre><code>## Warning: package &#39;tidyr&#39; was built under R version 3.2.5</code></pre>
+<pre><code>## Warning: package &#39;readr&#39; was built under R version 3.2.5</code></pre>
+<pre><code>## Warning: package &#39;purrr&#39; was built under R version 3.2.5</code></pre>
+<pre class="r"><code>library(lubridate)</code></pre>
+<pre><code>## Warning: package &#39;lubridate&#39; was built under R version 3.2.5</code></pre>
+<pre class="r"><code>library(reshape2)
+library(ggplot2)
+library(ggthemes)</code></pre>
+<pre><code>## Warning: package &#39;ggthemes&#39; was built under R version 3.2.5</code></pre>
+<pre class="r"><code>library(viridis)
+library(zoo)
+library(spTimer)</code></pre>
+<pre class="r"><code>sj_gwl = read.csv(&quot;sj_gwl_cleaned.csv&quot;)
+eto_data = read.csv(&quot;ETo_cleaned.csv&quot;)
+all_data &lt;- merge(sj_gwl, eto_data,  by = c(&quot;Year&quot;, &quot;Month&quot;))
+cat(&#39;The number of well location in the San Joaquin Valley: &#39;, n_distinct(sj_gwl$LATITUDE*sj_gwl$LONGITUDE))</code></pre>
+<pre><code>## The number of well location in the San Joaquin Valley:  436</code></pre>
+<p>First, we want to have a sense about how many missing records for a well location on a Yearly basis. Idealy, we hope each location has 12 measurements each year. From the following table and the heatmap, we clearly see that there is a significant problem of missing sensor measurements in the monthly data and only a few wells keep track the groundwater levels throughout the year.</p>
+<pre class="r"><code>sj_gwl %&gt;% group_by(CASGEM_STATION_ID, Year) %&gt;% summarise(num_records = n()) %&gt;% 
+  reshape2::dcast(CASGEM_STATION_ID ~ Year, value.var = &quot;num_records&quot;) %&gt;% 
+  mutate(total_records = rowSums(.[2:7],na.rm = TRUE)) %&gt;% arrange(desc(total_records)) %&gt;% head(20)</code></pre>
+<pre><code>##    CASGEM_STATION_ID 2011 2012 2013 2014 2015 2016 total_records
+## 1               2774   11   10   12   10   11   11            65
+## 2               6911   12   10   12   10    8    8            60
+## 3              27637   12   10   12   10    8    8            60
+## 4               3738   12    9    9    9   10   10            59
+## 5              28548   12    7   10    9    9   10            57
+## 6               3437   12    6    7    9   11   11            56
+## 7               3207    8    9   11   10    9    7            54
+## 8               3485    9    7   11    7    7   10            51
+## 9               3948    8    7   10    6    8   10            49
+## 10             26720   12   10   10    4    7    6            49
+## 11             26749   NA    8    9    8   10    8            43
+## 12             37917   12    7    4    8    5    5            41
+## 13             49530   12   12    3   NA   NA   NA            27
+## 14             49531   12   10   NA   NA    1   NA            23
+## 15             49533   12   10   NA   NA    1   NA            23
+## 16             49529   12   10   NA   NA   NA   NA            22
+## 17             49527   12    9   NA   NA   NA   NA            21
+## 18              3281   NA   NA   NA    5    8    7            20
+## 19              6760    3    3    4    3    3    4            20
+## 20              3129    1    3    4    2    2    4            16</code></pre>
+<pre class="r"><code>count_byyear &lt;- sj_gwl %&gt;% group_by(CASGEM_STATION_ID, Year) %&gt;% summarise(num_records = n()) %&gt;% 
+  reshape2::dcast(CASGEM_STATION_ID ~ Year, value.var = &quot;num_records&quot;) %&gt;% 
+  mutate(total_records = rowSums(.[2:7],na.rm = TRUE)) 
+count_byyear[is.na(count_byyear)] &lt;- 0
+
+newcount_byyear &lt;- count_byyear %&gt;% select(-total_records) %&gt;% reshape2::melt(id = c(&quot;CASGEM_STATION_ID&quot;))
+newcount_byyear$CASGEM_STATION_ID &lt;- as.character(count_byyear$CASGEM_STATION_ID)
+newcount_byyear$variable &lt;- as.character(newcount_byyear$variable)
+ggplot(newcount_byyear, aes(x= variable, y=CASGEM_STATION_ID)) + geom_tile(aes(fill = value)) + 
+  scale_fill_viridis(name=&quot;# Records&quot;) +
+  theme(axis.ticks.y=element_blank(), axis.text.y=element_blank()) +
+  labs(x= &quot;Year&quot;, y= &quot;Wells&quot;, title=&quot;Number of Measurements per year &amp; well&quot;)</code></pre>
+<p><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-4-1.png" width="960" /></p>
+<p>We can see that the ETo and groundwater levels are time dependent and possibly have correlation with each other, although we just made one example to illustrate our “guess” here.</p>
+<pre class="r"><code>all_data$MEASUREMENT_DATE &lt;- as.yearmon(paste(all_data$Year, all_data$Month), &quot;%Y %m&quot;)
+ggplot(all_data[all_data$CASGEM_STATION_ID==2774,], aes(x = MEASUREMENT_DATE, y = ETO_avg)) + geom_line() +
+  ggtitle(&#39;ETo change over time for the well location 2774 &#39;)</code></pre>
+<pre><code>## Don&#39;t know how to automatically pick scale for object of type yearmon. Defaulting to continuous.</code></pre>
+<p><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-5-1.png" width="768" /></p>
+<pre class="r"><code>ggplot(all_data[all_data$CASGEM_STATION_ID==2774,], aes(x = MEASUREMENT_DATE, y = Sol_Rad_avg)) + geom_line() +
+  ggtitle(&#39;Average Solar Radiation change for the well location 2774 &#39;)</code></pre>
+<pre><code>## Don&#39;t know how to automatically pick scale for object of type yearmon. Defaulting to continuous.</code></pre>
+<p><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-6-1.png" width="768" /></p>
+<pre class="r"><code>ggplot(all_data[all_data$CASGEM_STATION_ID==2774,], aes(x = MEASUREMENT_DATE, y = WSEL_calc)) + geom_line() +
+  ggtitle(&#39;Groundwater Levels change for the well location 2774 &#39;)</code></pre>
+<pre><code>## Don&#39;t know how to automatically pick scale for object of type yearmon. Defaulting to continuous.</code></pre>
+<p><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
+<p>Let’s also visualize the well locations on a map.</p>
+<pre class="r"><code>library(ggmap)
+map &lt;- get_map(location = &#39;San Joaquin&#39;, zoom =10, filename = &#39;gwl_map.png&#39;)
+ggmap(map) +
+  stat_density2d(aes(x = LONGITUDE, y = LATITUDE, fill = ..level.., alpha= ..level..), 
+                 data = sj_gwl, size=2, bins = 4, geom = &quot;polygon&quot;) +
+  facet_wrap(~ Year) + guides(alpha=FALSE, fill=guide_legend(title =&quot;Measurements Density&quot;))</code></pre>
+<p><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-8-1.png" width="960" /></p>
+<p>Since response variable groundwater levels is calculated by adding Ground Surface Elevation to either the Water Surface reading or the negative Reference Point reading, the <code>WSEL</code> can be negative. We would consider to properly transform the response variable for the purposes of normality and variance stabilizing in modeling. We can double check the distribution of the transformed variable. We use log transformation here while other box-cox transformations can be ultilized.</p>
+<pre class="r"><code>all_data$WSEL_transformed &lt;- log(all_data$WSEL_calc + (1-min(all_data$WSEL_calc)))
+hist(all_data$WSEL_calc, breaks = 25)</code></pre>
+<p><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<pre class="r"><code>hist(all_data$WSEL_transformed, breaks = 25)</code></pre>
+<p><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+</div>
+<div id="bayesian-spatial-temporal-modeling" class="section level2">
+<h2>Bayesian Spatial Temporal Modeling</h2>
+<p>The nature of the given data has two components - space(latitude and longitude) and time. Studies in literatures show that spatial and temporal effects are important for modeling sensor data from monitoring stations. Spatio-temporal models would allow us to leverage the inference and predictive power of spatial and temporal effects. In our problems of modeling groundwater levels, we can think that the values are generated by an underlying process of interactions between space and time effects. And this underlying process is determined by unknown parameters with certain statistical properties. This hierarchical structure is well-suited to model in a Bayesian framework that we can incorporate the prior information and then use Bayesian updating to correct our beliefs in our parameters.</p>
+<p>“This kind of hierarchical structure allows partial pooling so that external data can be included in a model even if these external data share only some characteristics with the current data being modeled.” quoted from this <a href="http://andrewgelman.com/2015/05/19/bayesian-inference-the-advantages-and-the-risks/">article</a> summarizes the advantages and risk of using bayesian inference. For example, in our case, we have missing values at different time stamps or locations. The partial pooling would use the relevance between different time and nearby neighbour locations to make inferences about the missing values. The R package <code>spTimer</code> has a great implementation of Bayesian Spatial-Temporal model as it compares to other methods in its <a href="https://www.jstatsoft.org/article/view/v063i15/v63i15.pdf">document</a>. However, a little downside of this package is that it requires special format of input. We have to make sure each location has the same time scale.</p>
+<pre class="r"><code>sj_train &lt;- sj_gwl %&gt;% filter(Year &lt;= 2015)
+sj_train$WSEL_transformed &lt;- log(sj_train$WSEL_calc + (1-min(sj_gwl$WSEL_calc)))
+sj_test &lt;- sj_gwl %&gt;% filter(Year &gt; 2015)
+sj_test$WSEL_transformed &lt;- log(sj_test$WSEL_calc + (1-min(sj_gwl$WSEL_calc)))</code></pre>
+<p>To apply the B.S.T Model in SpTimer package, we need to carefully remove the locations too close with each others, which is probably due to some computation issues.</p>
+<pre class="r"><code>cat(&quot;number of wells in San Joaquin Valley:&quot;, n_distinct(sj_train$LATITUDE*sj_train$LONGITUDE), &#39;\n&#39;)</code></pre>
+<pre><code>## number of wells in San Joaquin Valley: 430</code></pre>
+<pre class="r"><code>loc_df &lt;- as.matrix(unique(sj_train[,c(&quot;LONGITUDE&quot;,&quot;LATITUDE&quot;)]))
+fdm &lt;- spT.geodist(loc_df[,1],loc_df[,2])
+diag(fdm)&lt;-NA
+fdm&lt;-cbind(c(fdm),1:dim(fdm)[[2]],sort(rep(1:dim(fdm)[[1]],dim(fdm)[[2]])))
+fdm&lt;-fdm[!is.na(fdm[,1]),]
+tol &lt;- 0.05
+fdmis&lt;-fdm[fdm[,1] &lt; tol,] #sites too close 
+site_Todelete = unique(c(fdmis[,2],fdmis[,3]))
+cat(&quot;number of well locations being too close with each other: &quot;,length(site_Todelete),&#39;\n&#39;)</code></pre>
+<pre><code>## number of well locations being too close with each other:  22</code></pre>
+<pre class="r"><code>loc_df = as.data.frame(loc_df)
+loc_df$site_id = 1:dim(loc_df)[1]
+
+nloc_df = loc_df %&gt;% filter(!site_id %in% site_Todelete)
+sj_train_cleaned &lt;- left_join(nloc_df, sj_train) %&gt;% group_by(LONGITUDE,LATITUDE, Year, Month) %&gt;% 
+  summarise(WSEL_transformed = mean(WSEL_transformed))</code></pre>
+<pre><code>## Joining by: c(&quot;LONGITUDE&quot;, &quot;LATITUDE&quot;)</code></pre>
+<p>Transform the input format such that each location has the same time units.</p>
+<pre class="r"><code>sj_train_cleaned$place &lt;- paste(sj_train_cleaned$LONGITUDE,sj_train_cleaned$LATITUDE,sep=&quot;_&quot;)
+N &lt;- n_distinct(sj_train_cleaned$LATITUDE*sj_train_cleaned$LONGITUDE)
+Y &lt;- n_distinct(sj_train_cleaned$Year) 
+tmp_data &lt;- data.frame(matrix(NA, N*Y*12, 3))
+
+tmp_data[,1] &lt;- as.character(rep(unique(sj_train_cleaned$place), each = Y*12))
+tmp_data[,2] &lt;- as.numeric(rep(2011:2015,each = 12))
+tmp_data[,3] &lt;- as.numeric(1:12)
+colnames(tmp_data) &lt;- c(&quot;place&quot;, &quot;Year&quot;, &quot;Month&quot;)
+
+tmp_sj_train_cleaned &lt;- left_join(tmp_data, sj_train_cleaned, by = c(&quot;place&quot;, &quot;Year&quot;, &quot;Month&quot;))
+train_data &lt;- left_join(tmp_sj_train_cleaned, eto_data, by = c(&quot;Year&quot;, &quot;Month&quot;))#merge the eto data
+#nall_data = merge(all_data,ntest,by =c(&quot;place&quot;, &quot;Year&quot;, &quot;Season&quot;),)
+train_data$LONGITUDE = sapply(train_data[,&quot;place&quot;],function(x) as.numeric(strsplit(x, split=&#39;_&#39;)[[1]][1]))
+train_data$LATITUDE = sapply(train_data[,&quot;place&quot;],function(x) as.numeric(strsplit(x, split=&#39;_&#39;)[[1]][2]))</code></pre>
+<pre class="r"><code>dim(train_data)</code></pre>
+<pre><code>## [1] 24480     8</code></pre>
+<pre class="r"><code>sum(is.na(train_data$WSEL_transformed))/dim(train_data)[1] #33%</code></pre>
+<pre><code>## [1] 0.8978758</code></pre>
+<p>From my trials and errors, I found a lot of missing values in the training data would result in the unstatability of computation(failure to run). Thus, we could rather choose the locations without missing too much data and reduce the computation complexity. Later, we could use the fitted model to predict the missing values.</p>
+<pre class="r"><code>sj_gwl$place &lt;- paste(sj_gwl$LONGITUDE,sj_gwl$LATITUDE,sep=&quot;_&quot;)
+target_locs &lt;- sj_gwl %&gt;% group_by(place, Year) %&gt;% summarise(num_records = n()) %&gt;% 
+  reshape2::dcast(place ~ Year, value.var = &quot;num_records&quot;) %&gt;% 
+  mutate(total_records = rowSums(.[2:7],na.rm = TRUE)) %&gt;% arrange(desc(total_records)) %&gt;% 
+  filter(total_records&gt;20) %&gt;% select(place)
+target_locs &lt;- target_locs$place
+target_train_data &lt;- train_data[train_data$place %in% target_locs, ]</code></pre>
+<p>We decided to fit the spatial-temporal AR model. The AR model can be expressed as the following: <span class="math display">\[
+\begin{aligned}
+Z_{lt} &amp;= O_{lt} + \epsilon_{lt} \\
+O_{lt} &amp;= \rho O_{lt-1} X_{lt}\beta + \eta_{lt}
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(Z\)</span> is the observed values. <span class="math inline">\(O\)</span> is the expected values. <span class="math inline">\(\epsilon\)</span> refers to independent random noise. <span class="math inline">\(\eta\)</span> refers to the random spatio-temporal interaction effect following multivariate normal distribution mean 0 and a certain covariance matrix(function). <span class="math inline">\(\beta\)</span> refers the predictor coefficient estimates. <span class="math inline">\(l\)</span> symbols for each location and <span class="math inline">\(t\)</span> indicates each time stamp. This AR model has an addition term <span class="math inline">\(\rho O_{lt-1}\)</span> to introduce the time dependency structure like time series. The underlying unknown parameters are <span class="math inline">\(\theta=( \beta, \sigma_{\epsilon}, \sigma_{\eta}, \phi, \upsilon, \mu_l , \sigma_l)\)</span> where <span class="math inline">\((\mu_l , \sigma_l)\)</span> controls the time series structure for each location and <span class="math inline">\((\phi, \upsilon)\)</span> controls the rate of decay/variation of the correlation matrix as the distance of two locations increases. The <code>spT.priors</code> function allows to specify the priors of the parameters. We would use the statistics from the The <code>spT.decay</code> function is used to assign prior distribution for the spatial decay parameter.</p>
+<pre class="r"><code>set.seed(2017)
+#mean.prior &lt;- mean(train_data$WSEL_transformed, na.rm=T)
+#var.prior &lt;- var(train_data$WSEL_transformed, na.rm=T)
+#priors &lt;- spT.priors(model = &quot;AR&quot;, inv.var.prior = Gamm(2,1), beta.prior = Norm(mean.prior, 100))
+gwl.arx &lt;- spT.Gibbs(formula = WSEL_transformed ~ ETO_avg + Sol_Rad_avg, data = 
+                       target_train_data,
+                     model =&quot;AR&quot;, nItr=5000, nBurn=1000,
+                     spatial.decay= spT.decay(distribution = Gamm(a = 2, b = 1), tuning = 0.08),
+                     coords = ~LONGITUDE+LATITUDE)</code></pre>
+<pre><code>## 
+##  Output: AR models 
+## ---------------------------------------------------------------
+##  Sampled: 5000 of 5000, 100.00%.
+##  Batch Acceptance Rate (phi): 27.95%
+##  Checking Parameters: 
+##    phi: 0.0696, rho: 0.6664, sig2eps: 0.1337, sig2eta: 0.0837
+##    beta[1]: 1.5416   beta[2]: 1.0442   beta[3]: -0.0006
+## ---------------------------------------------------------------
+## ## 
+## # nBurn =  1000 , Iterations =  5000 . 
+## # Overall Acceptance Rate (phi) =  27.94 % 
+## ## 
+## ##
+## # Elapsed time: 6.87 Sec.
+## ##
+## 
+## # Model: AR</code></pre>
+<p>PMCC refers to predictive model choice criteria, which is commonly used as the criteria to compare and choose model. The lower, the better. The acceptance rate is suggested to be in the range between 15% - 40% from the reference.</p>
+<pre class="r"><code># Model selection criteria
+gwl.arx$PMCC </code></pre>
+<pre><code>##         Goodness.of.fit Penalty   PMCC
+## values:           38.96   78.82 117.78</code></pre>
+<p>Check the model fit.</p>
+<pre class="r"><code>spT.validation(target_train_data$WSEL_transformed[!is.na(target_train_data$WSEL_transformed)],                                      gwl.arx$fitted[,1][!is.na(target_train_data$WSEL_transformed)])</code></pre>
+<pre><code>## ##
+##  Mean Squared Error (MSE) 
+##  Root Mean Squared Error (RMSE) 
+##  Mean Absolute Error (MAE) 
+##  Mean Absolute Percentage Error (MAPE) 
+##  Bias (BIAS) 
+##  Relative Bias (rBIAS) 
+##  Relative Mean Separation (rMSEP)
+## ##</code></pre>
+<pre><code>##    MSE   RMSE    MAE   MAPE   BIAS  rBIAS  rMSEP 
+## 0.0808 0.2843 0.2199 5.6177 0.0021 0.0005 0.3134</code></pre>
+<p>From the metrics, it seems the model fits reasonably well. From the residual plots, it is not very promising since it seems to have a linear trend and there are some outlying cases at the tails.</p>
+<pre class="r"><code>plot(gwl.arx, residuals=TRUE)</code></pre>
+<p><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-19-1.png" width="672" /><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-19-2.png" width="672" /></p>
+<p>We can predict on the origin training dataset which has more locations. Note that the output from the <code>predict</code> function is a list, the predictioned are generated from the posterior distributions. The samples are stored in the <code>pred.sample</code> sublist.</p>
+<pre class="r"><code>interpolation.ar &lt;- predict(gwl.arx, newdata= train_data, 
+                            newcoords=~LONGITUDE+LATITUDE)</code></pre>
+<pre><code>## 
+##  Prediction: AR models 
+## #
+## # Tolerance Limit: 2
+## # There are some Prediction locations very close to the Fitted locations.
+## #
+## [1] &quot;Distance: 0  Predicted location: 12  Fitted location: 1 &quot;
+## [1] &quot;Distance: 0  Predicted location: 13  Fitted location: 2 &quot;
+## [1] &quot;Distance: 1.27  Predicted location: 14  Fitted location: 2 &quot;
+## [1] &quot;Distance: 1.27  Predicted location: 13  Fitted location: 3 &quot;
+## [1] &quot;Distance: 0  Predicted location: 14  Fitted location: 3 &quot;
+## [1] &quot;Distance: 1.78  Predicted location: 18  Fitted location: 3 &quot;
+## [1] &quot;Distance: 1.78  Predicted location: 14  Fitted location: 4 &quot;
+## [1] &quot;Distance: 0  Predicted location: 18  Fitted location: 4 &quot;
+## [1] &quot;Distance: 1.1  Predicted location: 20  Fitted location: 4 &quot;
+## [1] &quot;Distance: 0  Predicted location: 19  Fitted location: 5 &quot;
+## [1] &quot;Distance: 0  Predicted location: 27  Fitted location: 6 &quot;
+## [1] &quot;Distance: 0  Predicted location: 41  Fitted location: 7 &quot;
+## [1] &quot;Distance: 0.54  Predicted location: 46  Fitted location: 7 &quot;
+## [1] &quot;Distance: 1.85  Predicted location: 62  Fitted location: 8 &quot;
+## [1] &quot;Distance: 0  Predicted location: 64  Fitted location: 8 &quot;
+## [1] &quot;Distance: 1.64  Predicted location: 65  Fitted location: 8 &quot;
+## [1] &quot;Distance: 1.1  Predicted location: 87  Fitted location: 9 &quot;
+## [1] &quot;Distance: 1.94  Predicted location: 92  Fitted location: 9 &quot;
+## [1] &quot;Distance: 0  Predicted location: 96  Fitted location: 9 &quot;
+## [1] &quot;Distance: 1.75  Predicted location: 104  Fitted location: 9 &quot;
+## [1] &quot;Distance: 1.52  Predicted location: 105  Fitted location: 9 &quot;
+## [1] &quot;Distance: 0  Predicted location: 226  Fitted location: 10 &quot;
+## [1] &quot;Distance: 1.8  Predicted location: 248  Fitted location: 10 &quot;
+## [1] &quot;Distance: 1.36  Predicted location: 233  Fitted location: 11 &quot;
+## [1] &quot;Distance: 1.1  Predicted location: 237  Fitted location: 11 &quot;
+## [1] &quot;Distance: 1  Predicted location: 249  Fitted location: 11 &quot;
+## [1] &quot;Distance: 0  Predicted location: 252  Fitted location: 11 &quot;
+## [1] &quot;Distance: 1.51  Predicted location: 264  Fitted location: 11 &quot;
+## [1] &quot;Distance: 0  Predicted location: 258  Fitted location: 12 &quot;
+## [1] &quot;Distance: 1.97  Predicted location: 274  Fitted location: 12 &quot;
+## [1] &quot;Distance: 1.48  Predicted location: 260  Fitted location: 13 &quot;
+## [1] &quot;Distance: 0  Predicted location: 268  Fitted location: 13 &quot;
+## [1] &quot;Distance: 1.99  Predicted location: 312  Fitted location: 14 &quot;
+## [1] &quot;Distance: 1.62  Predicted location: 316  Fitted location: 14 &quot;
+## [1] &quot;Distance: 0  Predicted location: 327  Fitted location: 14 &quot;
+## [1] &quot;Distance: 1.64  Predicted location: 331  Fitted location: 14 &quot;
+## [1] &quot;Distance: 1.57  Predicted location: 332  Fitted location: 14 &quot;
+## [1] &quot;Distance: 0  Predicted location: 362  Fitted location: 15 &quot;
+## [1] &quot;Distance: 2  Predicted location: 387  Fitted location: 16 &quot;
+## [1] &quot;Distance: 0  Predicted location: 393  Fitted location: 16 &quot;
+## [1] &quot;Distance: 1.53  Predicted location: 395  Fitted location: 16 &quot;
+## [1] &quot;Distance: 1.42  Predicted location: 397  Fitted location: 16 &quot;
+## [1] &quot;Distance: 0.96  Predicted location: 400  Fitted location: 16 &quot;
+## [1] &quot;Distance: 1.42  Predicted location: 406  Fitted location: 16 &quot;
+## [1] &quot;Distance: 0  Predicted location: 394  Fitted location: 17 &quot;
+## #
+## # Romove the locations and run again. 
+## #
+## -------------------------------------------------
+##   Sampled: 400 of 4000, 10.00%
+## -------------------------------------------------
+## -------------------------------------------------
+##   Sampled: 800 of 4000, 20.00%
+## -------------------------------------------------
+## -------------------------------------------------
+##   Sampled: 1200 of 4000, 30.00%
+## -------------------------------------------------
+## -------------------------------------------------
+##   Sampled: 1600 of 4000, 40.00%
+## -------------------------------------------------
+## -------------------------------------------------
+##   Sampled: 2000 of 4000, 50.00%
+## -------------------------------------------------
+## -------------------------------------------------
+##   Sampled: 2400 of 4000, 60.00%
+## -------------------------------------------------
+## -------------------------------------------------
+##   Sampled: 2800 of 4000, 70.00%
+## -------------------------------------------------
+## -------------------------------------------------
+##   Sampled: 3200 of 4000, 80.00%
+## -------------------------------------------------
+## -------------------------------------------------
+##   Sampled: 3600 of 4000, 90.00%
+## -------------------------------------------------
+## -------------------------------------------------
+##   Sampled: 4000 of 4000, 100.00%
+## -------------------------------------------------
+## ## 
+## # Predicted samples and summary statistics are given.
+## # nBurn =  1000 . Iterations =  5000 . 
+## ## 
+## ##
+## # Elapsed time: 8 Min. 33.68 Sec.
+## ##</code></pre>
+<p>We can use the <code>Mean</code> sublist from the output as our predictions. The number of rows means the time range(in order) and the number of columns means the number of unique of locations.</p>
+<pre class="r"><code>dim(interpolation.ar$Mean)</code></pre>
+<pre><code>## [1]  60 408</code></pre>
+<p>We need to rescale the prediction into the original scale to compare the fitting performance. We can observe that the model tends to underfit.</p>
+<pre class="r"><code>spt_pred &lt;- as.vector(matrix(interpolation.ar$Median, ncol = 1))
+train_data$actual &lt;- exp(train_data$WSEL_transformed) - (1-min(sj_gwl$WSEL_calc))
+train_data$preds &lt;- exp(spt_pred)-(1-min(sj_gwl$WSEL_calc)) 
+plot(train_data$preds, train_data$actual)+
+lines(x = c(-100,100), y = c(-100,100))</code></pre>
+<p><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<pre><code>## numeric(0)</code></pre>
+<p>What if we want to check out the model performance for a specific location?</p>
+<pre class="r"><code>plot_gwl &lt;- function(long, lat, plot_data){
+   plot_data$Date &lt;- as.yearmon(paste(plot_data$Year, plot_data$Month), &quot;%Y %m&quot;)
+   plot_data %&gt;% filter(LONGITUDE==long, LATITUDE==lat) %&gt;% 
+      select(Date, actual, preds) %&gt;%  melt(id=&quot;Date&quot;) %&gt;% 
+      ggplot(aes(x=Date,y= value,colour= variable,group=variable)) + 
+        geom_line() + labs(x= &quot;Date&quot;, y= &quot;Groundwater Levels&quot;, title= paste(&quot;Groundwater levels at &quot;, long,&#39;,&#39;, lat))
+         
+}</code></pre>
+<p>Let’s check one location that has relatively rich data points. It’s clear to see that the trend component of the time series is captured well in this case, while there is some bias between the actual values and prediction/interpolations.</p>
+<pre class="r"><code>plot_gwl(-121.0765, 37.9331, train_data)</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<p><img src="../../../projects/groundwater/groundwater_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>In the next steps, we need to come up with ways for bias correction.</p>
+</div>
+<div id="other-ideas" class="section level2">
+<h2>Other ideas</h2>
+<p>Being able to understand and predict groundwater level changes would give us insights like how to save energy and how to distribute water resource in a more efficient way. In the project, I communicated and learned from domain experts to better understand the context, proposed ways to collect/aggregate useful information and tried to improve the spatial temporal model. However, this kind of modeling problem is challenging because it’s related to the complex climate system. And there is still a lot of room to verify our hypothesis and improve our modeling. A few other ideas are worthwhile to try:</p>
+<ol style="list-style-type: decimal">
+<li>Bias correction for outlier cases through bootsrapped estimates through close points</li>
+<li>Try generative additive model or machine learning approach</li>
+<li>We can consider whether we could incorporate more factors like weather or geographic features into our original model to improve predictive power.</li>
+</ol>
+</div>
+
+      
+       </div>
+     </div>
+   </div>
+
+
+
+
+
+        <a href="#" class="back-to-top">
+        <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+
+        </a>
+
+         <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = '';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+   
+
+          </div>
+      </div>
+  </div>
+  <script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/bootstrap.min.js"></script>
+<script src="../../../js/jquery.cookie.js"> </script>
+<script src="../../../js/ekko-lightbox.js"></script>
+<script src="../../../js/jquery.scrollTo.min.js"></script>
+<script src="../../../js/masonry.pkgd.min.js"></script>
+<script src="../../../js/imagesloaded.pkgd.min.js"></script>
+<script src="../../../js/owl.carousel.min.js"></script>
+<script src="../../../js/front.js"></script>
+<script src="../../../js/backtotop.js"></script> 
+
+</body>
+</html>
